@@ -1,7 +1,7 @@
 ﻿#region License
 
 /*
- * Copyright 2002-2012 the original author or authors.
+ * Copyright 2010-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,34 +22,35 @@ using System;
 
 using Spring.Social.OAuth2;
 using Spring.Social.Facebook.Api;
+using Spring.Social.Facebook.Api.Impl;
 
 namespace Spring.Social.Facebook.Connect
 {
-    /// <summary>
-    /// Twitter <see cref="IServiceProvider"/> implementation.
-    /// </summary>
-    /// <author>Keith Donald</author>
-    /// <author>Bruno Baia (.NET)</author>
-    public class FacebookServiceProvider : AbstractOAuth2ServiceProvider<IFacebook>
-    {
-        /// <summary>
-        /// Creates a new instance of <see cref="FacebookServiceProvider"/>.
-        /// </summary>
-        /// <param name="clientId">The client identifier.</param>
-        /// <param name="clientSecret">The client secret.</param>
-        public FacebookServiceProvider(string clientId, string clientSecret)
-            : base(new FacebookOAuth2Template(clientId, clientSecret))
-        {
-        }
+	/// <summary>
+	/// Facebook <see cref="IServiceProvider"/> implementation.
+	/// </summary>
+	/// <author>Keith Donald</author>
+	/// <author>SplendidCRM (.NET)</author>
+	public class FacebookServiceProvider : AbstractOAuth2ServiceProvider<IFacebook>
+	{
+		/// <summary>
+		/// Creates a new instance of <see cref="FacebookServiceProvider"/>.
+		/// </summary>
+		/// <param name="clientId">The application's API key.</param>
+		/// <param name="clientSecret">The application's API secret.</param>
+		public FacebookServiceProvider(string clientId, string clientSecret)
+			: base(new FacebookOAuth2Template(clientId, clientSecret))
+		{
+		}
 
-        /// <summary>
-        /// Returns an API interface allowing the client application to access protected resources on behalf of a user.
-        /// </summary>
-        /// <param name="accessToken">The API access token.</param>
-        /// <returns>A binding to the service provider's API.</returns>
-        public override IFacebook GetApi(string accessToken)
-        {
-            throw new NotImplementedException();
-        }
-    }
+		/// <summary>
+		/// Returns an API interface allowing the client application to access protected resources on behalf of a user.
+		/// </summary>
+		/// <param name="accessToken">The API access token.</param>
+		/// <returns>A binding to the service provider's API.</returns>
+		public override IFacebook GetApi(string accessToken)
+		{
+			return new FacebookTemplate(accessToken);
+		}
+	}
 }
