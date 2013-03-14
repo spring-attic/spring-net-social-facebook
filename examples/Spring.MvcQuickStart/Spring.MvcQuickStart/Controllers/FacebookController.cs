@@ -46,6 +46,26 @@ namespace Spring.MvcQuickStart.Controllers
 
             Session["AccessGrant"] = accessGrant;
 
+            IFacebook facebookClient = facebookProvider.GetApi(accessGrant.AccessToken);
+            FacebookProfile profile = facebookClient.UserOperations.GetUserProfile();
+            return View(profile);
+        }
+
+        // GET: /Facebook/UpdateStatus
+        public ActionResult UpdateStatus()
+        {
+            return View();
+        }
+
+        // POST: /Facebook/UpdateStatus
+        [HttpPost]
+        public ActionResult UpdateStatus(string status)
+        {
+            AccessGrant accessGrant = Session["AccessGrant"] as AccessGrant;
+            IFacebook facebookClient = facebookProvider.GetApi(accessGrant.AccessToken);
+
+            facebookClient.FeedOperations.UpdateStatus(status);
+
             return View();
         }
     }

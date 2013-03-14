@@ -1,7 +1,11 @@
-﻿@{
+﻿@model Spring.Social.Facebook.Api.FacebookProfile
+@{
     ViewBag.Title = "Callback";
 }
 
-<h2>Welcome !</h2>
+<h2>Welcome @Model.FirstName @Model.LastName!</h2>
+
+@Html.ActionLink("Update your status", "UpdateStatus")
+
 
 
