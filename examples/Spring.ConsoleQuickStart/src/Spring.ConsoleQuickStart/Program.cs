@@ -13,8 +13,8 @@ namespace Spring.ConsoleQuickStart
     {
         // Register your own Facebook app at https://developers.facebook.com/apps.
         // Set your application id & secret here
-        private const string FacebookApiId = "314009958612610";
-        private const string FacebookApiSecret = "7781b94aa8d62c5faab28e5e892fdc1a";
+        private const string FacebookApiId = TODO;
+        private const string FacebookApiSecret = TODO;
 
         static void Main(string[] args)
         {
@@ -57,27 +57,11 @@ namespace Spring.ConsoleQuickStart
                 TestOpenGraphOperations(facebook, sTestUserID);
                 TestFqlOperations(facebook, sTestUserID);
             }
-#if NET_4_0
-			catch (AggregateException ae)
-			{
-				ae.Handle(ex =>
-					{
-						if (ex is Spring.Rest.Client.HttpResponseException)
-						{
-							Console.WriteLine(ex.Message);
-							Console.WriteLine(((Spring.Rest.Client.HttpResponseException)ex).GetResponseBodyAsString());
-							return true;
-						}
-						return false;
-					});
-			}
-#else
             catch (Spring.Rest.Client.HttpResponseException ex)
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.GetResponseBodyAsString());
             }
-#endif
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
