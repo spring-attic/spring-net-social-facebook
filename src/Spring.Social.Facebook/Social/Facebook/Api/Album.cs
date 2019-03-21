@@ -39,7 +39,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/album/
+		// https://developers.facebook.com/docs/reference/api/album/
 		public Album(String id, Reference from, String name, enumType type, String link, int count, enumPrivacy privacy, DateTime createdTime)
 		{
 			this.ID          = id         ;

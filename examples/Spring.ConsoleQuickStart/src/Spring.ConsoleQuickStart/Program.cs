@@ -859,7 +859,7 @@ namespace Spring.ConsoleQuickStart
                 string statusID = facebook.FeedOperations.UpdateStatus("Test " + DateTime.Now.ToString());
                 facebook.FeedOperations.DeletePost(statusID);
 				
-                FacebookLink link = new FacebookLink("http://amazon.com", "amazon", "amazon", "amazon");
+                FacebookLink link = new FacebookLink("https://amazon.com", "amazon", "amazon", "amazon");
                 string linkID = facebook.FeedOperations.PostLink("Test " + DateTime.Now.ToString(), link);
                 facebook.FeedOperations.DeletePost(linkID);
                 */
@@ -876,7 +876,7 @@ namespace Spring.ConsoleQuickStart
                 string postID = facebook.FeedOperations.Post(sTestUserID, "Test " + DateTime.Now.ToString());
                 facebook.FeedOperations.DeletePost(postID);
 				
-                FacebookLink link = new FacebookLink("http://amazon.com", "amazon", "amazon", "amazon");
+                FacebookLink link = new FacebookLink("https://amazon.com", "amazon", "amazon", "amazon");
                 string linkID = facebook.FeedOperations.PostLink(sTestUserID, "Test " + DateTime.Now.ToString(), link);
                 facebook.FeedOperations.DeletePost(linkID);
                 */
@@ -1259,7 +1259,7 @@ namespace Spring.ConsoleQuickStart
         {
             Console.WriteLine();
             Console.WriteLine("FqlOperations");
-            // http://developers.facebook.com/docs/reference/fql/
+            // https://developers.facebook.com/docs/reference/fql/
             string fql = "SELECT uid, username, name, first_name, last_name, email, contact_email, website, birthday_date, hometown_location, about_me FROM user WHERE uid IN (SELECT uid2 FROM friend WHERE uid1 = me())";
             List<Spring.Social.Facebook.Api.FacebookProfile> friends = facebook.FqlOperations.QueryFQL<List<FacebookProfile>>(fql);
             foreach (Spring.Social.Facebook.Api.FacebookProfile friend in friends)

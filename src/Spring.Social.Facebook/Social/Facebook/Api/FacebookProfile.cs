@@ -37,7 +37,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/user/
+		// https://developers.facebook.com/docs/reference/api/user/
 		public FacebookProfile(string id, string username, string name, string firstName, string lastName, string gender, string locale)
 		{
 			this.ID        = id;

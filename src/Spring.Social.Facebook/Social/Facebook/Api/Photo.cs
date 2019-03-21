@@ -60,7 +60,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/photo/
+		// https://developers.facebook.com/docs/reference/api/photo/
 		public Photo(string id, Reference from, string link, string icon, DateTime createdTime, List<Image> images)
 		{
 			this.ID          = id         ;

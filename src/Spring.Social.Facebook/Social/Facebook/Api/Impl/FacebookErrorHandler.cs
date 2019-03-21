@@ -167,7 +167,7 @@ namespace Spring.Social.Facebook.Api.Impl
 				}
 				else
 				{
-					//throw new FacebookApiException("Something is broken at Facebook. Please see http://developer.facebook.com/ to report the issue.", FacebookApiError.Server);
+					//throw new FacebookApiException("Something is broken at Facebook. Please see https://developer.facebook.com/ to report the issue.", FacebookApiError.Server);
 				}
 			}
 			else if ( statusCode == HttpStatusCode.BadGateway )

@@ -41,7 +41,7 @@ namespace Spring.Social.Facebook.Api.Impl
 		#region IFqlOperations Members
 		public T QueryFQL<T>(string fql) where T : class
 		{
-			// http://developers.facebook.com/docs/reference/fql/
+			// https://developers.facebook.com/docs/reference/fql/
 			return restTemplate.GetForObject<T>("fql?q=" + HttpUtils.FormEncode(fql));
 		}
 		#endregion

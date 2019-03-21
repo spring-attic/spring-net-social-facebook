@@ -35,7 +35,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/question_option/
+		// https://developers.facebook.com/docs/reference/api/question_option/
 		public QuestionOption(string id, string name, Reference from, int votes, DateTime createdTime)
 		{
 			this.ID          = id         ;
