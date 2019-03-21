@@ -38,7 +38,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/event/
+		// https://developers.facebook.com/docs/reference/api/event/
 		public Event(String id, String name, Reference owner, enumPrivacy privacy, DateTime startTime, DateTime endTime, DateTime updatedTime)
 		{
 			this.ID          = id         ;

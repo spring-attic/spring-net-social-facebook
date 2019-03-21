@@ -64,7 +64,7 @@ namespace Spring.Social.Facebook.Api.Impl.Json
 				profile.Quotes             = json.ContainsName("quotes"             ) ? json.GetValue<string>("quotes"             ) : String.Empty;
 				profile.RelationshipStatus = json.ContainsName("relationship_status") ? json.GetValue<string>("relationship_status") : String.Empty;
 				profile.Website            = json.ContainsName("website"            ) ? json.GetValue<string>("website"            ) : String.Empty;
-				// http://developers.facebook.com/docs/reference/fql/user/
+				// https://developers.facebook.com/docs/reference/fql/user/
 				// The birthday of the user being queried. The format of this date varies based on the user's locale.
 				profile.Birthday           = json.ContainsName("birthday"           ) ? JsonUtils.ToDateTime(json.GetValue<string>("birthday"     ), "MM/dd/yyyy"                  ) : DateTime.MinValue;
 				// The birthday of the user being queried in MM/DD/YYYY format.

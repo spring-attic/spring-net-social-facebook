@@ -37,7 +37,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/video/
+		// https://developers.facebook.com/docs/reference/api/video/
 		public Video(string id, Reference from, string picture, string embedHtml, string icon, string source, DateTime createdTime, DateTime updatedTime)
 		{
 			this.ID          = id         ;

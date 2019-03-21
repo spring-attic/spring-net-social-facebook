@@ -37,7 +37,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/group/
+		// https://developers.facebook.com/docs/reference/api/group/
 		public Group(string id, Reference owner, string name, enumPrivacy privacy, string icon, DateTime updatedTime)
 		{
 			this.ID          = id         ;

@@ -37,7 +37,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/checkin/
+		// https://developers.facebook.com/docs/reference/api/checkin/
 		public Checkin(string id, Page place, Reference from, Reference application, DateTime createdTime)
 		{
 			this.ID          = id;

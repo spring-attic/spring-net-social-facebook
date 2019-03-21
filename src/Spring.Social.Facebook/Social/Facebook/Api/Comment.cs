@@ -37,7 +37,7 @@ namespace Spring.Social.Facebook.Api
 		{
 		}
 
-		// http://developers.facebook.com/docs/reference/api/Comment/
+		// https://developers.facebook.com/docs/reference/api/Comment/
 		public Comment(string id, Reference from, string message, DateTime createdTime)
 		{
 			this.ID          = id         ;
